@@ -22,7 +22,7 @@ export default function Clients() {
   async function load() {
     setLoading(true);
     try {
-      const params = search ? `?search=${encodeURIComponent(search)}&limit=200` : '?limit=200';
+      const params = search ? `?search=${encodeURIComponent(search)}&limit=500` : '?limit=500';
       const data = await Api.listClients(params);
       setClients(data.clients);
     } catch (e) {
